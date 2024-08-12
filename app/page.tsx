@@ -22,7 +22,7 @@ export default function Home() {
         <div className="definition-container mb-12" style={{ fontFamily: 'monospace', color: '#4dabf7' }}>
           <span className="word" style={{ fontWeight: 'bold' }}>malleable</span> (mal-ee-uh-buhl) <br />
           <span>adj. A canvas for infinite possibilities, forever </span>
-          <span id="unfolding" className="unfolding"></span>
+          <span id="unfolding" className="unfolding">unfolding</span>
           <span className="blinking-cursor">|</span>
         </div>
 
@@ -46,7 +46,7 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              {"-&gt;"} 
+              {"->"} 
             </span>
           </h2>
         </a>
@@ -59,7 +59,7 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              {"-&gt;"} 
+              {"->"}  
             </span>
           </h2>
         </a>
@@ -72,7 +72,7 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              {"-&gt;"} 
+              {"->"} 
             </span>
           </h2>
         </a>
@@ -85,7 +85,7 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              {"-&gt;"} 
+              {"->"} 
             </span>
           </h2>
         </a>
@@ -111,10 +111,11 @@ export default function Home() {
         }
 
         .unfolding {
+          display: inline-block; /* Ensures animation works properly */
           overflow: hidden;
           white-space: nowrap;
-          margin: 0 auto;
-          animation: typing 2s steps(9, end), blink-caret 0.75s step-end infinite;
+          animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
+          border-right: 2px solid #4dabf7; /* Makes blinking cursor visible */
         }
 
         .blinking-cursor {
