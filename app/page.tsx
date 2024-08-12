@@ -11,17 +11,24 @@ export default function Home() {
           <Image
             src="/Logo.svg"
             alt="Malleable Mind Logo"
-            width={600} 
+            width={600}
             height={144}
             priority
           />
+        </div>
+
+        <div className="definition-container mb-12" style={{ fontFamily: 'monospace', color: '#4dabf7' }}>
+          <span className="word" style={{ fontWeight: 'bold' }}>malleable</span> (mal-ee-uh-buhl) <br />
+          <span>adj. A canvas for infinite possibilities, forever </span>
+          <span id="unfolding"></span>
+          <span className="blinking-cursor" style={{ animation: 'blink 1s infinite', marginLeft: '0.1em' }}>|</span>
         </div>
 
         <div>
           <Image
             src="/hellscapeLogo.svg"
             alt="Surviving the hellscape of late-stage capitalism"
-            width={450} 
+            width={450}
             height={450}
             priority
           />
@@ -37,7 +44,7 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              -&gt;
+              ->
             </span>
           </h2>
         </a>
@@ -50,7 +57,7 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              -&gt;
+              ->
             </span>
           </h2>
         </a>
@@ -63,7 +70,7 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              -&gt;
+              ->
             </span>
           </h2>
         </a>
@@ -76,11 +83,21 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              -&gt;
+              ->
             </span>
           </h2>
         </a>
       </div>
+      <script>{`
+        const unfoldingElement = document.getElementById('unfolding');
+        const word = 'unfolding';
+        let index = 0;
+
+        setInterval(() => {
+          unfoldingElement.textContent = word.substring(0, index + 1);
+          index = (index + 1) % word.length;
+        }, 200); 
+      `}</script>
     </main>
   );
 }
