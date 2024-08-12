@@ -23,7 +23,6 @@ export default function Home() {
           <span className="word" style={{ fontWeight: 'bold' }}>malleable</span> (mal-ee-uh-buhl) <br />
           <span>adj. A canvas for infinite possibilities, forever </span>
           <span id="unfolding" className="unfolding">unfolding</span>
-          <span className="blinking-cursor">|</span>
         </div>
 
         <div>
@@ -48,6 +47,7 @@ export default function Home() {
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
               {"->"} 
             </span>
+            Docs
           </h2>
         </a>
 
@@ -61,6 +61,7 @@ export default function Home() {
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
               {"->"}  
             </span>
+            Learn
           </h2>
         </a>
 
@@ -74,6 +75,7 @@ export default function Home() {
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
               {"->"} 
             </span>
+            Templates
           </h2>
         </a>
 
@@ -87,6 +89,7 @@ export default function Home() {
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
               {"->"} 
             </span>
+            Deploy
           </h2>
         </a>
       </div>
@@ -97,7 +100,7 @@ export default function Home() {
             width: 0;
           }
           to {
-            width: 100%;
+            width: 9ch; /* Number of characters in "unfolding" */
           }
         }
 
@@ -111,16 +114,12 @@ export default function Home() {
         }
 
         .unfolding {
-          display: inline-block; /* Ensures animation works properly */
+          display: inline-block;
           overflow: hidden;
           white-space: nowrap;
-          animation: typing 2s steps(40, end), blink-caret 0.75s step-end infinite;
-          border-right: 2px solid #4dabf7; /* Makes blinking cursor visible */
-        }
-
-        .blinking-cursor {
-          margin-left: 0.1em;
-          animation: blink-caret 0.75s step-end infinite;
+          animation: typing 2s steps(9, end), blink-caret 0.75s step-end infinite;
+          border-right: 2px solid #4dabf7; /* Blinking cursor */
+          vertical-align: bottom; /* Align with the rest of the sentence */
         }
       `}</style>
     </main>
