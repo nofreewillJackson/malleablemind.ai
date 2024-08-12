@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 77, 171, 247; /* updated to #4dabf7 */
+  --background-start-rgb: 52, 58, 64; /* updated to #343a40 */
+  --background-end-rgb: 52, 58, 64; /* consistent background */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --foreground-rgb: 255, 255, 255; /* keep white text for dark mode */
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
