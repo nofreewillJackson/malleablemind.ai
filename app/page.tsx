@@ -88,7 +88,8 @@ export default function Home() {
           </h2>
         </a>
       </div>
-      <script>{`
+
+      <script dangerouslySetInnerHTML={{ __html: `
         const unfoldingElement = document.getElementById('unfolding');
         const word = 'unfolding';
         let index = 0;
@@ -97,7 +98,7 @@ export default function Home() {
           unfoldingElement.textContent = word.substring(0, index + 1);
           index = (index + 1) % word.length;
         }, 200); 
-      `}</script>
+      ` }} />
     </main>
   );
 }
