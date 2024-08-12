@@ -20,8 +20,9 @@ export default function RootLayout({
       <Head>
         <title>Surviving the hellscape of late-stage capitalism</title>
         <meta name="description" content="Jackson & Friends" />
-        <link rel="icon" href="/favicon.ico" /> {/* For compatibility */}
-        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+          {/* It also works 
+  for multi-line comments. }<link rel="icon" href="/favicon.ico" /> */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
       <body className={inter.className}>{children}</body>
     </html>
