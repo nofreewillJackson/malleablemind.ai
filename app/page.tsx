@@ -44,7 +44,7 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              ->
+              -&gt;
             </span>
           </h2>
         </a>
@@ -57,7 +57,7 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              ->
+              -&gt;
             </span>
           </h2>
         </a>
@@ -70,7 +70,7 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              ->
+              -&gt;
             </span>
           </h2>
         </a>
@@ -83,22 +83,26 @@ export default function Home() {
         >
           <h2 className="mb-4 text-3xl font-semibold">
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-              ->
+              -&gt;
             </span>
           </h2>
         </a>
       </div>
 
-      <script dangerouslySetInnerHTML={{ __html: `
-        const unfoldingElement = document.getElementById('unfolding');
-        const word = 'unfolding';
-        let index = 0;
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            const unfoldingElement = document.getElementById('unfolding');
+            const word = 'unfolding';
+            let index = 0;
 
-        setInterval(() => {
-          unfoldingElement.textContent = word.substring(0, index + 1);
-          index = (index + 1) % word.length;
-        }, 200); 
-      ` }} />
+            setInterval(() => {
+              unfoldingElement.textContent = word.substring(0, index + 1);
+              index = (index + 1) % word.length;
+            }, 200);
+          `,
+        }}
+      />
     </main>
   );
 }
