@@ -47,7 +47,7 @@ export default function Home() {
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
               {"->"} 
             </span>
-            Docs
+            
           </h2>
         </a>
 
@@ -61,7 +61,7 @@ export default function Home() {
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
               {"->"}  
             </span>
-            Learn
+            
           </h2>
         </a>
 
@@ -75,7 +75,7 @@ export default function Home() {
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
               {"->"} 
             </span>
-            Templates
+            
           </h2>
         </a>
 
@@ -89,18 +89,24 @@ export default function Home() {
             <span className="inline-block transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
               {"->"} 
             </span>
-            Deploy
+            
           </h2>
         </a>
       </div>
 
       <style jsx>{`
         @keyframes typing {
-          from {
+          0% {
             width: 0;
           }
-          to {
+          70% {
             width: 9ch; /* Number of characters in "unfolding" */
+          }
+          85% {
+            width: 9ch; /* Pause */
+          }
+          100% {
+            width: 0; /* Reset */
           }
         }
 
@@ -117,7 +123,7 @@ export default function Home() {
           display: inline-block;
           overflow: hidden;
           white-space: nowrap;
-          animation: typing 2s steps(9, end), blink-caret 0.75s step-end infinite;
+          animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
           border-right: 2px solid #4dabf7; /* Blinking cursor */
           vertical-align: bottom; /* Align with the rest of the sentence */
         }
