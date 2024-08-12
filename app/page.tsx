@@ -20,8 +20,8 @@ export default function Home() {
         <div className="definition-container mb-12" style={{ fontFamily: 'monospace', color: '#4dabf7' }}>
           <span className="word" style={{ fontWeight: 'bold' }}>malleable</span> (mal-ee-uh-buhl) <br />
           <span>adj. A canvas for infinite possibilities, forever </span>
-          <span id="unfolding"></span>
-          <span id="cursor" style={{ marginLeft: '0.1em' }}>|</span>
+          <span id="unfolding" className="unfolding"></span>
+          <span className="blinking-cursor">|</span>
         </div>
 
         <div>
@@ -89,43 +89,37 @@ export default function Home() {
         </a>
       </div>
 
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            const unfoldingElement = document.getElementById('unfolding');
-            const cursorElement = document.getElementById('cursor');
-            const word = 'unfolding';
-            let index = 0;
+      <style jsx>{`
+        @keyframes typing {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
 
-            function typeWord() {
-              if (index < word.length) {
-                unfoldingElement.textContent += word[index];
-                index++;
-                setTimeout(typeWord, 200);
-              } else {
-                setTimeout(deleteWord, 1000);
-              }
-            }
+        @keyframes blink-caret {
+          from, to {
+            border-color: transparent;
+          }
+          50% {
+            border-color: #4dabf7;
+          }
+        }
 
-            function deleteWord() {
-              if (index > 0) {
-                unfoldingElement.textContent = unfoldingElement.textContent.slice(0, -1);
-                index--;
-                setTimeout(deleteWord, 100);
-              } else {
-                setTimeout(typeWord, 500);
-              }
-            }
+        .unfolding {
+          overflow: hidden;
+          white-space: nowrap;
+          margin: 0 auto;
+          animation: typing 2s steps(9, end), blink-caret 0.75s step-end infinite;
+        }
 
-            function blinkCursor() {
-              cursorElement.style.visibility = (cursorElement.style.visibility === 'hidden') ? 'visible' : 'hidden';
-            }
-
-            setInterval(blinkCursor, 500);
-            typeWord();
-          `,
-        }}
-      />
+        .blinking-cursor {
+          margin-left: 0.1em;
+          animation: blink-caret 0.75s step-end infinite;
+        }
+      `}</style>
     </main>
   );
 }
