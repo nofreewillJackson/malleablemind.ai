@@ -11,7 +11,7 @@ export default function Home() {
           <Image
             src="/Logo.svg"
             alt="Malleable Mind Logo"
-            width={600} // Adjusted size for Logo.svg
+            width={600} 
             height={144}
             priority
           />
@@ -19,9 +19,9 @@ export default function Home() {
 
         <div>
           <Image
-            src="/Logo2.svg"
-            alt="Malleable Mind Logo"
-            width={450} // Adjusted size for Logo2.svg
+            src="/hellscapeLogo.svg"
+            alt="Surviving the hellscape of late-stage capitalism"
+            width={450} 
             height={450}
             priority
           />
