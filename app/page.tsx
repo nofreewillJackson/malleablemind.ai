@@ -21,7 +21,7 @@ export default function Home() {
           <span className="word" style={{ fontWeight: 'bold' }}>malleable</span> (mal-ee-uh-buhl) <br />
           <span>adj. A canvas for infinite possibilities, forever </span>
           <span id="unfolding"></span>
-          <span className="blinking-cursor" style={{ animation: 'blink 1s infinite', marginLeft: '0.1em' }}>|</span>
+          <span id="cursor" style={{ marginLeft: '0.1em' }}>|</span>
         </div>
 
         <div>
@@ -93,13 +93,36 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: `
             const unfoldingElement = document.getElementById('unfolding');
+            const cursorElement = document.getElementById('cursor');
             const word = 'unfolding';
             let index = 0;
 
-            setInterval(() => {
-              unfoldingElement.textContent = word.substring(0, index + 1);
-              index = (index + 1) % word.length;
-            }, 200);
+            function typeWord() {
+              if (index < word.length) {
+                unfoldingElement.textContent += word[index];
+                index++;
+                setTimeout(typeWord, 200);
+              } else {
+                setTimeout(deleteWord, 1000);
+              }
+            }
+
+            function deleteWord() {
+              if (index > 0) {
+                unfoldingElement.textContent = unfoldingElement.textContent.slice(0, -1);
+                index--;
+                setTimeout(deleteWord, 100);
+              } else {
+                setTimeout(typeWord, 500);
+              }
+            }
+
+            function blinkCursor() {
+              cursorElement.style.visibility = (cursorElement.style.visibility === 'hidden') ? 'visible' : 'hidden';
+            }
+
+            setInterval(blinkCursor, 500);
+            typeWord();
           `,
         }}
       />
