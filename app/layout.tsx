@@ -27,7 +27,9 @@ export default function RootLayout({
         {/* Favicon for Apple devices */}
         <link rel="apple-touch-icon" sizes="152x152" href="../workspaces/malleablemind.ai/app/apple-touch-icon-152x152.png" /> 
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-[#343a40] text-[#4dabf7] min-h-screen`}>
+        {children}
+      </body>
     </html>
   );
 }
