@@ -36,7 +36,7 @@ export default function LandingPage() {
 
       <div className="mt-12 grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-4 w-full gap-6">
         {[
-          "https://malleablemind.ai/excalidraw-notes",
+          "https://malleablemind.ai/j-garden",
           "https://malleablemind.ai/learn",
           "https://malleablemind.ai/templates",
           "https://malleablemind.ai/deploy",
