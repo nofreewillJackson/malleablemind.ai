@@ -34,7 +34,7 @@ export default function LandingPage() {
 
       <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
         <a
-          href="https://malleablemind.ai/docs"
+          href="https://malleablemind.ai/excalidraw-notes"
           className="group rounded-lg border border-transparent px-6 py-5 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           target="_blank"
           rel="noopener noreferrer"
