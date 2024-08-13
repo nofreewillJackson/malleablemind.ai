@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col items-center justify-center px-4 py-12 sm:p-24 w-full max-w-screen-lg mx-auto">
+    <div className="flex flex-col items-center justify-center px-4 py-12 sm:p-24 w-full">
       <div className="flex flex-col items-center justify-center w-full">
-        <div className="mb-12 w-3/4 sm:w-auto">
+        <div className="mb-12 w-full max-w-sm sm:max-w-lg">
           <Image
             src="/Logo.svg"
             alt="Malleable Mind Logo"
@@ -16,13 +16,13 @@ export default function LandingPage() {
           />
         </div>
 
-        <div className="definition-container mb-12 text-center sm:text-left w-2/3 sm:w-auto" style={{ fontFamily: 'monospace', color: '#4dabf7' }}>
+        <div className="definition-container mb-12 text-center sm:text-left w-full max-w-xs sm:max-w-md" style={{ fontFamily: 'monospace', color: '#4dabf7' }}>
           <span className="word" style={{ fontWeight: 'bold' }}>malleable</span> (mal-ee-uh-buhl) <br />
           <span>adj. A canvas for infinite possibilities, forever </span>
           <span id="unfolding" className="unfolding">unfolding</span>
         </div>
 
-        <div className="mb-12 w-3/4 sm:w-auto">
+        <div className="mb-12 w-full max-w-sm sm:max-w-lg">
           <Image
             src="/hellscapeLogo.svg"
             alt="Surviving the hellscape of late-stage capitalism"
@@ -34,7 +34,7 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <div className="mt-12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 w-full gap-6">
+      <div className="mt-12 grid grid-cols-4 sm:grid-cols-4 lg:grid-cols-4 w-full gap-6">
         {[
           "https://malleablemind.ai/excalidraw-notes",
           "https://malleablemind.ai/learn",
@@ -50,7 +50,7 @@ export default function LandingPage() {
           >
             <h2 className="text-xl sm:text-3xl font-semibold flex items-center justify-center">
               <span className="transition-transform group-hover:translate-x-2 motion-reduce:transform-none">
-                {"->"} 
+                {">"} 
               </span>
             </h2>
           </a>
