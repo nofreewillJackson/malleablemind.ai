@@ -59,7 +59,9 @@ body {
 a.site-body-left-column-site-name {
 	display: none;
 }
-
+.site-footer::after {
+  content: 'your custom text';
+}
 div.site-footer {
 	display: none;
 }
