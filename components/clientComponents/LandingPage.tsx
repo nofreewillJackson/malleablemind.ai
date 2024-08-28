@@ -25,7 +25,7 @@ export default function LandingPage() {
         <div className="mb-12 w-full max-w-sm sm:max-w-lg">
           <Image
             src="/hellscapeLogo.svg"
-            alt="Surviving the hellscape of late-stage capitalism"
+            alt="Surviving the hellscape of post·mod·ern·ism"
             width={450}
             height={450}
             priority
